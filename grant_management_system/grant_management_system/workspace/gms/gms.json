@@ -8,7 +8,7 @@
  "doctype": "Workspace",
  "for_user": "",
  "hide_custom": 0,
- "icon": "grid",
+ "icon": "projects",
  "idx": 0,
  "indicator_color": "green",
  "is_hidden": 0,
@@ -331,7 +331,7 @@
    "type": "Link"
   }
  ],
- "modified": "2025-05-04 21:22:58.445947",
+ "modified": "2025-05-04 21:26:53.998752",
  "modified_by": "Administrator",
  "module": "Grant Management System",
  "name": "GMS",
