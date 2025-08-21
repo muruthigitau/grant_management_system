@@ -8,13 +8,11 @@
  "field_order": [
   "naming_series",
   "grant_application",
+  "applicant_name",
   "grant_call",
+  "partner",
   "grant_call_name",
   "project_type",
-  "column_break_5",
-  "applicant_name",
-  "institution",
-  "institution_name",
   "column_break_8",
   "expected_start_date",
   "expected_end_date",
@@ -82,7 +80,7 @@
    "read_only": 1
   },
   {
-   "fetch_from": "grant_application.grant_call_name",
+   "fetch_from": "grant_call.grant_call_name",
    "fieldname": "grant_call_name",
    "fieldtype": "Read Only",
    "in_list_view": 1,
@@ -99,35 +97,13 @@
    "options": "Internal\nExternal"
   },
   {
-   "fieldname": "column_break_5",
-   "fieldtype": "Column Break"
-  },
-  {
    "bold": 1,
-   "fetch_from": "owner.full_name",
+   "fetch_from": "grant_application.applicant_name",
    "fieldname": "applicant_name",
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Name",
    "read_only": 1
-  },
-  {
-   "allow_in_quick_entry": 1,
-   "bold": 1,
-   "fetch_from": "grant_application.institution",
-   "fieldname": "institution",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
-   "label": "Administering Institution",
-   "options": "Member",
-   "read_only": 1
-  },
-  {
-   "fetch_from": "grant_application.institution_name",
-   "fieldname": "institution_name",
-   "fieldtype": "Read Only",
-   "label": "Institution Name"
   },
   {
    "fieldname": "column_break_8",
@@ -359,6 +335,18 @@
    "options": "Grant Project",
    "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "bold": 1,
+   "fetch_from": "grant_application.partner",
+   "fieldname": "partner",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Partner",
+   "options": "Partner",
+   "read_only": 1
   }
  ],
  "grid_page_length": 50,
@@ -390,7 +378,7 @@
    "link_fieldname": "grant_project"
   }
  ],
- "modified": "2025-05-04 20:27:06.131586",
+ "modified": "2025-08-21 08:36:28.651745",
  "modified_by": "Administrator",
  "module": "Grant Management System",
  "name": "Grant Project",
@@ -411,7 +399,7 @@
   }
  ],
  "row_format": "Dynamic",
- "search_fields": " applicant_name, grant_application, grant_call_name, institution_name, status, is_active",
+ "search_fields": " applicant_name, grant_application, grant_call_name, status, is_active",
  "show_name_in_global_search": 1,
  "sort_field": "creation",
  "sort_order": "DESC",
